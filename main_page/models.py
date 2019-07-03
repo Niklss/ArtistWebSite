@@ -12,6 +12,7 @@ class Art(models.Model):
     name = models.CharField(max_length=255)
     year = models.IntegerField(_('year'), null=True)
     description = models.CharField(_('description'), max_length=255, null=True)
+    image = models.ImageField(_('image'), upload_to='images/', null=True)
     objects = ArtManager()
 
     class Meta:
